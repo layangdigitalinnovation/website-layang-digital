@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $post->title }} - Layang Digital</title>
+    <title>{{ $post->meta_title ?: $post->title }} - Layang Digital</title>
     <meta name="description" content="{{ $post->meta_description ?? Str::limit(strip_tags($post->content), 160) }}">
+    @if($post->meta_keywords)
+    <meta name="keywords" content="{{ $post->meta_keywords }}">
+    @endif
+    @if($post->canonical_url)
+    <link rel="canonical" href="{{ $post->canonical_url }}">
+    @endif
     <link rel="icon" type="image/png" href="{{ asset('images/Logo-icon-layang-digital80x80.png') }}">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="{{ $post->title }}">
+    <meta property="og:title" content="{{ $post->meta_title ?: $post->title }}">
     <meta property="og:description" content="{{ $post->meta_description ?? Str::limit(strip_tags($post->content), 160) }}">
     @if($post->image)
     <meta property="og:image" content="{{ asset('storage/' . $post->image) }}">
