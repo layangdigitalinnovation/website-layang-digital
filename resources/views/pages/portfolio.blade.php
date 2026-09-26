@@ -1,16 +1,28 @@
-<section id="portfolio" class="py-24 bg-slate-50 border-t border-slate-200">
+@extends('layouts.app')
+
+@section('content')
+<!-- Hero Section -->
+<div class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-900 border-b border-slate-800">
+    <!-- Background Decor -->
+    <div class="absolute inset-0 z-0 pointer-events-none flex justify-center items-center">
+        <div class="absolute w-[800px] h-[500px] bg-gradient-to-tr from-primary-900/40 to-blue-900/40 rounded-full blur-[100px] opacity-60"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-[4rem] font-extrabold text-white mb-6 tracking-tight font-outfit leading-tight">
+            Karya Terbaik <br class="hidden sm:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-400">Layang Digital</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            Jelajahi bagaimana kami membantu bisnis dan institusi memecahkan masalah kompleks melalui inovasi sistem dan perangkat lunak.
+        </p>
+    </div>
+</div>
+
+<!-- Portfolio Grid Section -->
+<div class="py-20 md:py-32 bg-slate-50 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 font-outfit">
-                Software yang Telah Kami Bangun
-            </h2>
-            <p class="text-lg text-slate-600 leading-relaxed">
-                Dari enterprise system hingga SaaS product, kami membangun solusi digital untuk berbagai kebutuhan bisnis.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
             
             <!-- Case Study 1 -->
             <x-case-study-card 
@@ -71,22 +83,23 @@
                 href="#portfolio-5"
                 image="images/portfolio/LMS-Universitas-BTH.png"
             />
-            
-            <!-- See More Card -->
-            <div class="group bg-primary-600 rounded-2xl overflow-hidden border border-primary-500 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center p-8 min-h-[400px]">
-                <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3 font-outfit">Lihat Semua Portfolio</h3>
-                <p class="text-primary-100 mb-8">
-                    Temukan lebih banyak project dan studi kasus yang telah kami kerjakan.
-                </p>
-                <x-button href="{{ route('portfolio') }}" variant="secondary" class="bg-white text-primary-700 hover:bg-slate-50 w-full sm:w-auto px-8">
-                    Jelajahi Portfolio
-                </x-button>
-            </div>
 
         </div>
         
     </div>
+</div>
+
+<!-- CTA Section -->
+<section class="py-24 bg-white relative overflow-hidden border-t border-slate-100">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-50/50 to-white pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 font-outfit">Punya Visi untuk Transformasi Digital Bisnis Anda?</h2>
+        <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+            Mari diskusikan masalah teknis dan kebutuhan digitalisasi bisnis Anda bersama tim ahli kami. Kami siap mewujudkannya.
+        </p>
+        <a href="{{ url('/#contact') }}" class="inline-flex justify-center items-center rounded-xl px-8 py-4 font-bold bg-primary-600 text-white hover:bg-primary-700 shadow-lg shadow-primary-600/30 transition-all hover:-translate-y-1 text-lg">
+            Mulai Konsultasi Gratis Sekarang
+        </a>
+    </div>
 </section>
+@endsection

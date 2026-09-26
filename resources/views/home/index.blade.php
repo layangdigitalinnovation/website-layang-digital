@@ -2,6 +2,7 @@
 
 @section('content')
     @include('home.hero')
+    @include('home.clients')
     @include('home.problems')
     @include('home.solutions')
     @include('home.services')

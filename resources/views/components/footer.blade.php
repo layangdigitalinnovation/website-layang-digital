@@ -32,33 +32,32 @@
             
             <!-- Quick Links -->
             <div class="lg:col-span-2 md:col-span-1">
-                <h4 class="text-white font-bold mb-6 font-outfit uppercase tracking-wider text-sm">Links</h4>
+                <h4 class="text-white font-bold mb-6 font-outfit uppercase tracking-wider text-sm">Tautan</h4>
                 <ul class="space-y-3">
-                    <li><a href="/#solutions" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Solutions</a></li>
-                    <li><a href="/#services" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Services</a></li>
-                    <li><a href="/#portfolio" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Portfolio</a></li>
+                    <li><a href="{{ route('portfolio') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Portofolio</a></li>
                     <li><a href="{{ route('blog.index') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Blog</a></li>
-                    <li><a href="{{ route('about') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">About</a></li>
-                    <li><a href="/#contact" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Contact</a></li>
+                    <li><a href="{{ route('about') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Tentang Kami</a></li>
+                    <li><a href="{{ route('careers.index') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Karir</a></li>
+                    <li><a href="/#contact" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Kontak</a></li>
                 </ul>
             </div>
             
             <!-- Services -->
             <div class="lg:col-span-3 md:col-span-1">
-                <h4 class="text-white font-bold mb-6 font-outfit uppercase tracking-wider text-sm">Services</h4>
+                <h4 class="text-white font-bold mb-6 font-outfit uppercase tracking-wider text-sm">Layanan</h4>
                 <ul class="space-y-3">
-                    <li><a href="#" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Web Development</a></li>
-                    <li><a href="#" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Business System</a></li>
-                    <li><a href="#" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">SaaS Development</a></li>
-                    <li><a href="#" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Mobile Development</a></li>
-                    <li><a href="#" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Custom Software</a></li>
-                    <li><a href="#" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">API Integration</a></li>
+                    <li><a href="{{ route('services.show', 'pengembangan-web') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Pengembangan Web</a></li>
+                    <li><a href="{{ route('services.show', 'sistem-bisnis') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Sistem Bisnis</a></li>
+                    <li><a href="{{ route('services.show', 'pengembangan-saas') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Pengembangan SaaS</a></li>
+                    <li><a href="{{ route('services.show', 'pengembangan-mobile') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Pengembangan Mobile</a></li>
+                    <li><a href="{{ route('services.show', 'software-kustom') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Software Kustom</a></li>
+                    <li><a href="{{ route('services.show', 'integrasi-api') }}" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Integrasi API</a></li>
                 </ul>
             </div>
             
             <!-- Contact -->
             <div class="lg:col-span-2 md:col-span-2">
-                <h4 class="text-white font-bold mb-6 font-outfit uppercase tracking-wider text-sm">Contact</h4>
+                <h4 class="text-white font-bold mb-6 font-outfit uppercase tracking-wider text-sm">Kontak</h4>
                 <ul class="space-y-3">
                     <li><a href="mailto:cs@layangdigital.com" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">Email</a></li>
                     <li><a href="https://wa.me/6282116925851" class="text-slate-400 hover:text-primary-400 transition-colors text-sm">WhatsApp</a></li>
@@ -72,8 +71,8 @@
                 &copy; {{ date('Y') }} Layang Digital Innovation. All rights reserved.
             </p>
             <div class="flex space-x-6 text-sm text-slate-500">
-                <a href="{{ route('privacy') }}" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
-                <a href="{{ route('terms') }}" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+                <a href="{{ route('privacy') }}" class="hover:text-slate-300 transition-colors">Kebijakan Privasi</a>
+                <a href="{{ route('terms') }}" class="hover:text-slate-300 transition-colors">Syarat Ketentuan</a>
             </div>
         </div>
     </div>

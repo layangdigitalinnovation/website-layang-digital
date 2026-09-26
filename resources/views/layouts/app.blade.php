@@ -1,3 +1,6 @@
+@php
+    $pixels = \App\Models\AdPixel::where('is_active', true)->get();
+@endphp
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
@@ -16,8 +19,23 @@
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Ad Pixels Head -->
+    @foreach($pixels as $pixel)
+        @if($pixel->script_head)
+            {!! $pixel->script_head !!}
+        @endif
+    @endforeach
 </head>
 <body class="font-sans text-slate-800 antialiased bg-slate-50 selection:bg-primary-500 selection:text-white flex flex-col min-h-screen">
+    
+    <!-- Ad Pixels Body -->
+    @foreach($pixels as $pixel)
+        @if($pixel->script_body)
+            {!! $pixel->script_body !!}
+        @endif
+    @endforeach
+
     @include('components.navbar')
     
     <main class="flex-grow">

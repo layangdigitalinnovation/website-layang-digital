@@ -56,10 +56,10 @@
             </div>
         </div>
 
-        <div class="mt-16 text-center">
-            <a href="#solutions" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors group">
-                Mari ubah proses tersebut menjadi sistem digital
-                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        <div class="mt-12 sm:mt-16 text-center px-4">
+            <a href="#contact" class="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 bg-primary-50 text-primary-700 rounded-2xl sm:rounded-full hover:bg-primary-100 hover:shadow-sm transition-all group w-full sm:w-auto">
+                <span class="text-sm sm:text-base font-semibold text-center leading-snug">Mari ubah proses tersebut menjadi sistem digital</span>
+                <svg class="w-5 h-5 ml-3 flex-shrink-0 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
         </div>
         
